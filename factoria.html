@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<body>
+    <form>
+        <input type="text" id="Userinput">
+    </form>
+    <input type="submit" value="See Total" onclick="calcu()">
+    <p id = 'demo'></p>
+    <script>
+        function calcu(){
+            let input = parseInt(document.getElementById("Userinput").value);
+            let factoria = 1;
+            for (let i=1; i <= input; i++ ){
+                factoria *= i;
+            }
+            document.getElementById("demo").innerHTML = `factoria of ${input}! = ${factoria}`;
+        }
+    </script>
+</body>
