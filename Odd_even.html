@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<body>
+    <form>
+        <input type="text" id="Userinput">
+    </form>
+    <input type="submit" value="See value" onclick="calcu()">
+    <p id = 'demo'></p>
+    <script>
+        function calcu(){
+            var input = document.getElementById("Userinput").value;
+            if (input % 2 === 0){
+                document.getElementById("demo").innerHTML = 'Even Number';
+            } else {
+                document.getElementById("demo").innerHTML = 'Odd Number';
+            }
+        }
+    </script>
+</body>
