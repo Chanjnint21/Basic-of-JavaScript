@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tesing insert table with data</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="container">
+            <div class="input">Name: <input id="name" type="text" placeholder="hhh"/></div>
+            <div class="input">Age: <input type="text" id="age" placeholder="xxx"/> </div>
+            <div class="input">Grade: <input type="text" id="grade" placeholder="1111"/></div>
+
+            <button id="entry">Entry</button>
+        </div>
+    </body>
+</html>
+<script>
+    var entry =document.getElementById("entry");
+    var row = 1;
+    entry.addEventListener("click", displayDetails )
+    function displayDetails(){
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var grade = document.getElementById("grade").value;
+
+        if(!name|| !age || !grade){
+            alert("fill in the box");
+            return;
+        }
+        localStorage.setItem("name", name);
+        localStorage.setItem("age", age);
+        localStorage.setItem("grade", grade);
+
+        window.location.href= '/Users/soramitsukh/Documents/nextt.html';
+    }
+</script>
+<style>
+    * {
+        margin-top: 10px;
+        padding: 0;
+    }
+    html{
+        background-color: rgb(255, 219, 219);
+
+        background: radial-gradient(rgbd(179, 255, 255, 0.5), rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.2));
+        text-align: center;
+    }
+    .input input{
+        width: 200px;
+        border: 2px solid #004d00;
+        padding: 5px;
+
+    }
+
+    button {
+        background-color: orange;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+    button:hover {
+        background-color: rgb(255, 255, 255);
+        opacity: 0.5;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: 50px auto;
+        background-color: burlywood;
+    }
+    table, th, td{
+        border: 2px solid black;
+        padding: 5px;
+    }
+     th{
+        font-size: 30px;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #004d00;
+     }
+     td{
+        font-size: 25px;
+        color: crimson;
+     }
+</style>
